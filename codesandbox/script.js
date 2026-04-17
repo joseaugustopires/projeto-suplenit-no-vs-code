@@ -1268,7 +1268,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Extraímos os dados com fallback seguro
     const buyerId = buyer.id_usuario || buyer.id;
     const buyerName = buyer.nome_completo || buyer.full_name;
-    const idade = buyer.idade || "N/A";
+    const idade = buyer.idade ? `${buyer.idade} anos` : "N/A";
     const peso = buyer.peso ? `${buyer.peso}kg` : "N/A";
     const altura = buyer.altura ? `${buyer.altura}cm` : "N/A";
 
@@ -1279,7 +1279,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="patient-info-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; text-align: center;">
             <div style="background: #fff; padding: 10px; border-radius: 6px; border: 1px solid #e5e7eb;">
                 <span style="display:block; font-size: 0.8em; color: #666;">Idade</span>
-                <strong>${idade} anos</strong>
+               <strong>${idade}</strong>
             </div>
             <div style="background: #fff; padding: 10px; border-radius: 6px; border: 1px solid #e5e7eb;">
                 <span style="display:block; font-size: 0.8em; color: #666;">Peso</span>
